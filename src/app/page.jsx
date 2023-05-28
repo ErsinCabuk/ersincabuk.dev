@@ -4,6 +4,9 @@ import Image from "next/image"
 export default function HomePage() {
   return (
     <>
+      <header className='flex items-center justify-center border-2 border-neutral-700 bg-neutral-800 rounded-2xl p-8 mb-2'>
+        <h1>Ersin Çabuk</h1>
+      </header>
       <main>
         <div className="flex items-center-justify-between gap-x-2 min-h-min">
           <div className='flex flex-col gap-y-1 min-w-max'>

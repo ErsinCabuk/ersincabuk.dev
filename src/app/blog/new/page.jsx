@@ -1,7 +1,9 @@
+const session = null
+
 export default function BlogNewPostPage() {
+  //if(!session) 
+
   return (
-    <main>
-      <h1>New Blog</h1>
-    </main>
+    <h1>New Blog Page</h1>
   )
 }
