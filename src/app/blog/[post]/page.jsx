@@ -1,13 +1,16 @@
+import { getAllPosts, getPost } from "@/lib/posts.js";
 import fs from 'fs'
 import matter from 'gray-matter'
 import Markdown from 'markdown-to-jsx'
+import { notFound } from "next/navigation";
 
-export const generateStaticParams = async() => {
-  return [{ post: "post1" }]
+export function generateMetadata(props) {
+  return { title: getPost(props.params.post).data.title }
 }
 
 export default function BlogPostPage(props) {
-  let post = matter(fs.readFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${props.params.post}.mdx`, "utf-8"))
+  if(!getAllPosts().find(post => post.slug == props.params.post)) notFound()
+  let post = getPost(props.params.post)
   return (
     <>
       <main>
