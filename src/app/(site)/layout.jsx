@@ -1,4 +1,4 @@
-import "../../public/globals.css"
+import "../../../public/globals.css"
 
 export const metadata = {
   title: "Ersin Çabuk"
