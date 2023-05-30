@@ -1,9 +1,9 @@
+import fs from "fs";
 import matter from "gray-matter"
-import { readFileSync, readdirSync } from "fs";
 
 function getAllPosts() {
-  return readdirSync("C:/Users/Ersin/ersincabuk.dev/src/posts").map(fileName => {
-    let matterResult = matter(readFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${fileName}`))
+  return fs.readdirSync("C:/Users/Ersin/ersincabuk.dev/src/posts").map(fileName => {
+    let matterResult = matter(fs.readFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${fileName}`))
     return { 
       title: matterResult.data.title, 
       date: matterResult.data.date, 
@@ -15,7 +15,12 @@ function getAllPosts() {
 }
 
 function getPost(post) {
-  return matter(readFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${post}.mdx`, "utf-8"))
+  return matter(fs.readFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${post}.mdx`, "utf-8"))
 }
 
-export { getAllPosts, getPost }
+
+function createPost(slug, content) {
+  return fs.writeFileSync(`C:/Users/Ersin/ersincabuk.dev/src/posts/${slug}`, content)
+}
+
+export { getAllPosts, getPost, createPost }
