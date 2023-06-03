@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <header>Header</header>
-    <slot/>
-    <footer>Footer</footer>
+  <div class="bg-primary-800">
+    <main>
+      <slot/>
+    </main>
   </div>
 </template>
