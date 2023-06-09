@@ -51,20 +51,10 @@
       </div>
       <div class="flex flex-col gap-y-2 p-5">
         <h4 class="font-bold text-xs text-gray-400">
-          {{ JSON.stringify(data) }}
+          Spotify
         </h4>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2mwCk42hjSzBV7TgdeUd0z?utm_source=generator&theme=0" width="100%" height="256" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-  const data = await useFetch("https://api.spotify.com/v1/me/player/recently-played", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer BQBJYPheWQLlaQdfmzSw7d03DHsx1Q1b8xoUAVbjqaodTiCnkP012y6KxyfqlMZOhVfrGyniVnRLmNSBhs3DJ-gjOZPTlqaBsO7T4tDmbodE7uF4R84",
-    }
-  })
-</script>
