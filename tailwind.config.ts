@@ -8,8 +8,8 @@ export default<Partial<Config>> {
         DEFAULT: "10rem"
       }
     },
-    extend: {
-      
-    }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
 }
