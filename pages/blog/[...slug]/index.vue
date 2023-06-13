@@ -3,8 +3,8 @@
     <ContentDoc :path="route.path">
       <template v-slot="{ doc }">
         <div>
-          <TitleBox>Blog: {{ doc.title.charAt(0).toUpperCase() + doc.title.slice(1) }}</TitleBox>
-          <article class="prose prose-invert prose-sky p-4 bg-neutral-800 border-[1px] border-neutral-700 rounded-2xl min-w-full">
+          <TitleBox class="mb-10">Blog: {{ doc.title.charAt(0).toUpperCase() + doc.title.slice(1) }}</TitleBox>
+          <article class="prose prose-lg prose-invert prose-headings:mb-4 prose-h1:font-normal prose-a:no-underline min-w-full ">
             <ContentRenderer :value="doc" />
           </article>
         </div>
