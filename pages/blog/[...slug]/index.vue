@@ -15,20 +15,8 @@
       <!-------------------- POST NOT FOUND -------------------->
       <!-------------------- /blog PAGE -------------------->
       <template #not-found>
-        <div v-if="route.path == '/blog'">
-          <TitleBox>Blog Categories</TitleBox>
-          <div class="grid grid-cols-2 gap-2">
-            <Box v-for="category in categories"
-                  :link="category.link"
-                  class="text-center">
-              {{ category.category }}
-            </Box>
-          </div>
-        </div>
-        <!-------------------- /blog PAGE -------------------->
-
         <!-------------------- POST NOT FOUND -------------------->
-        <TitleBox v-else-if="posts.length == 0">Not found</TitleBox>
+        <TitleBox v-if="posts.length == 0">Not found</TitleBox>
         <!-------------------- POST NOT FOUND -------------------->
 
         <!-------------------- POSTS -------------------->
