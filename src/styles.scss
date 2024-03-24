@@ -78,3 +78,7 @@ body {
   background-color: $color-neutral-900;
   color: $color-neutral-300;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
