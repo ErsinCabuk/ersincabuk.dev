@@ -1,0 +1,16 @@
+@use "../styles.scss";
+
+:host {
+  display: flex;
+  column-gap: 32px;
+  padding: 64px 32px;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  main {
+    flex: 1 1 0%;
+    border: 4px solid styles.$color-neutral-800;
+    border-radius: 16px;
+    padding: 32px;
+  }
+}

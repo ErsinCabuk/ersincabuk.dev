@@ -1,0 +1,3 @@
+@for (page of pages; track $index) {
+  <a class="page" [routerLink]="page.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"></a>
+}

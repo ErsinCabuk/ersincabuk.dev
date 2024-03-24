@@ -1,0 +1,29 @@
+@use "../../styles.scss";
+
+:host {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  background-color: styles.$color-neutral-800;
+  border-radius: 16px;
+
+  .page {
+    background-color: styles.$color-neutral-600;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+
+    &.active {
+      background-color: styles.$color-indigo-500;
+      scale: 1.1;
+    }
+
+    &:hover:not(.active) {
+      background-color: styles.$color-indigo-400;
+      scale: 1.2;
+    }
+  }
+}
